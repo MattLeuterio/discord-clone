@@ -36,7 +36,7 @@ function Sidebar() {
     const channelName = prompt("Enter a new channel name");
   
     if (channelName) {
-      db.collection('channels').add({
+      db.collection('channels').add({ 
         channelName: channelName,
       })
     }
@@ -63,7 +63,7 @@ function Sidebar() {
         </div> 
       <div className="sidebar__channelsList">
         {channels.map((channel) => (
-          <SidebarChannel key={channel.id} id={channel.id} channel={channel.channel.channelName}/> 
+          <SidebarChannel key={channel.id} id={channel.id} channelName={channel.channel.channelName}/> 
         ))}
       </div>
       </div>
